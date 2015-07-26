@@ -1,0 +1,313 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+	.panel_input {
+		width: 360px;
+		padding: 3px;
+		vertical-align: middle;
+		border: 1px;
+	}
+	
+	.panel_title {
+		background: #F44336;
+		padding: 10px;
+		vertical-align: middle;
+		border: 1px;
+	}
+	
+	.panel_large_title {
+		background: #F44336;
+		padding: 10px;
+		vertical-align: middle;
+	}
+	
+	.large_title {
+		font-size: larger;
+		color: #FFFFFF;
+		font-weight: bolder;
+	}
+	
+	.label {
+		width: 150px;
+		font-size: medium;
+	}
+	
+	.label_long {
+		width: 400px;
+		font-size: medium;
+	}
+	
+	.input {
+		width: 200px;
+		padding: 5px 4px;
+		border: 1px solid #ccc;
+		border-top: 1px solid #999;
+		font-size: large;
+		font-family: Arial Unicode MS, Arial, sans-serif;
+	}
+	
+	.button {
+		width: 200px;
+		font-size: large;
+	}
+	
+	.pane {
+		text-align: center;
+	}
+	
+	.box {
+		padding: 20px;
+	}
+	
+	.button {
+		background-color: #eeeeee;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),
+			color-stop(100%, #cccccc));
+		background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: linear-gradient(top, #eeeeee, #cccccc);
+		border: 1px solid #ccc;
+		border-bottom: 1px solid #bbb;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		color: #333;
+		font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+			Geneva, Verdana, sans-serif;
+		line-height: 1;
+		padding: 0px 0;
+		text-align: center;
+		text-shadow: 0 1px 0 #eee;
+		width: 120px;
+	}
+	
+	.button:hover {
+		background-color: #dddddd;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd),
+			color-stop(100%, #bbbbbb));
+		background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: linear-gradient(top, #dddddd, #bbbbbb);
+		border: 1px solid #bbb;
+		border-bottom: 1px solid #999;
+		cursor: pointer;
+		text-shadow: 0 1px 0 #ddd;
+	}
+	
+	.button:active {
+		border: 1px solid #aaa;
+		border-bottom: 1px solid #888;
+		-webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+		-moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+		box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+	}
+	
+	.combo {
+		font-weight: bold;
+		font-size: medium;
+		width: 200px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div align="center">
+			<g:ScrollPanel>
+				<g:VerticalPanel width="100%" height="100%">
+					<g:VerticalPanel styleName="{style.panel_large_title}"
+						horizontalAlignment="ALIGN_CENTER" width="100%">
+						<g:Label text="TẠO MÁY BIẾN ÁP MỚI" styleName="{style.large_title}" />
+					</g:VerticalPanel>
+					<g:HorizontalPanel width="100%">
+						<g:VerticalPanel width="100%">
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label text="Kho" styleName="{style.label}" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_kho" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Tên TSCĐ" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_ten_tscd" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Số máy" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_SOMAY" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label text="Nhà sản xuất" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_NHA_SANXUAT" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label text="Ngày vận hành" styleName="{style.label}" />
+								<p1:DateBox ui:field="mdate_box" styleName="{style.input}"/>
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label text="Pha" styleName="{style.label}" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_pha" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Số sứ xuyên phía  sơ cấp" styleName="{style.label}" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_sosu_socap" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Điện áp ngắn mạch UK (%)" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_DIENAP_NGANMACH" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Tổn thất không tải (W)" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_TONTHAT_KHONGTAI" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Nấc đang vận hành" styleName="{style.label}" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_nac_vanhanh" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Loại dầu" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_LOAIDAU" />
+							</g:HorizontalPanel>
+							
+
+						</g:VerticalPanel>
+						<g:VerticalPanel width="100%">
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Nguyên giá :" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_NGUYENGIA" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Thuộc trạm" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_TRAM" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="MSTS" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_MSTS" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Nước sản xuất" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_NUOC_SANXUAT" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Công suất (kVA)" />
+								<g:ListBox ui:field="cbx_congsuat" styleName="{style.combo}" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}">
+								<g:Label styleName="{style.label}" text="Điện áp định mức" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_dienap_dinhmuc" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Số sứ xuyên phía thứ cấp" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_SOSU_THUCAP" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Dòng điện không tải Io (A)" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_DONGDIEN_KHONGTAI" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Tổn thất có tải (W)" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_TONTHAT_COTAI" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Tổ đấu dây" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_to_dauday" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Khối lượng dầu (lít)" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_KHOILUONG_DAU" />
+							</g:HorizontalPanel>
+						</g:VerticalPanel>
+						<g:VerticalPanel width="100%">
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Nguồn gốc tài sản" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_NGUONGOC_TAISAN" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Biên bản thí nghiệm" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_bb_tnghiem" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel styleName="{style.panel_input}"
+								verticalAlignment="ALIGN_MIDDLE">
+								<g:Label styleName="{style.label}" text="Tình trạng sử dụng" />
+								<g:ListBox styleName="{style.combo}" ui:field="cbx_tinhtrang_sudung" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Chủ sở hữu" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_CHU_SOHUU" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Trọng lượng toàn bộ máy (Kg)"
+									styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_TRONGLUONG" />
+							</g:HorizontalPanel>
+							<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE"
+								styleName="{style.panel_input}">
+								<g:Label text="Kích thước (mm)" styleName="{style.label}" />
+								<g:TextBox styleName="{style.input}" ui:field="edt_KICHTHUOC" />
+							</g:HorizontalPanel>
+						</g:VerticalPanel>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel width="100%">
+						<g:VerticalPanel styleName="{style.box}" width="100%"
+							horizontalAlignment="ALIGN_RIGHT">
+							<g:SimplePanel styleName="{style.button}" width="150px"
+								ui:field="pane_trolai">
+								<g:HTMLPanel>
+									<table align="center">
+										<tr>
+											<td>
+												<g:Image styleName="{style.pane}" url="back.png"></g:Image>
+											</td>
+											<td>
+												<g:Label text="HUỶ BỎ">Image buttom</g:Label>
+											</td>
+										</tr>
+									</table>
+								</g:HTMLPanel>
+							</g:SimplePanel>
+						</g:VerticalPanel>
+						<g:VerticalPanel styleName="{style.box}" width="100%"
+							horizontalAlignment="ALIGN_LEFT">
+							<g:SimplePanel styleName="{style.button}" width="150px"
+								ui:field="pane_hoantat">
+								<g:HTMLPanel>
+									<table align="center">
+										<tr>
+											<td>
+												<g:Image styleName="{style.pane}" url="finish.png"></g:Image>
+											</td>
+											<td>
+												<g:Label text="HOÀN TẤT" ui:field="tv_hoantat">Image buttom</g:Label>
+											</td>
+										</tr>
+									</table>
+								</g:HTMLPanel>
+							</g:SimplePanel>
+						</g:VerticalPanel>
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+			</g:ScrollPanel>
+
+
+		</div>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

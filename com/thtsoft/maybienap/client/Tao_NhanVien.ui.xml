@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	.panel {
+		vertical-align: middle;
+	}
+	.panel_label {
+		width: 100px;
+		padding: 5px;
+	}
+	.panel_input {
+		width: 250px;
+		padding: 5px;
+	}
+	.input {
+		width: 240px;
+		font-size: medium;
+	}
+	.panel_button {
+		width: 175px;
+		padding: 5px;
+	}
+	
+	</ui:style>
+	<g:HTMLPanel>
+		
+		<div align="center">
+		<g:VerticalPanel>
+			<g:VerticalPanel styleName="{style.panel}" verticalAlignment="ALIGN_MIDDLE" width="100%">
+				<g:Label text="TẠO NHÂN VIÊN" horizontalAlignment="ALIGN_CENTER" ui:field="tv_title"/>
+			</g:VerticalPanel>
+		<g:HorizontalPanel styleName="{style.panel}" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel styleName="{style.panel_label}">
+					<g:Label text="ĐƠN VỊ"/>
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.panel_input}">
+					<g:ListBox styleName="{style.input}" ui:field="cbx_DONVI"/>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.panel}" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel styleName="{style.panel_label}">
+					<g:Label text="HỌ TÊN"/>
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.panel_input}">
+					<g:TextBox styleName="{style.input}" ui:field="edt_HOTEN"/>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.panel}" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel styleName="{style.panel_label}">
+					<g:Label text="USERNAME"/>
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.panel_input}">
+					<g:TextBox styleName="{style.input}" ui:field="edt_USERNAME"/>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.panel}" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel styleName="{style.panel_label}">
+					<g:Label text="MẬT KHẨU"/>
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.panel_input}">
+					<g:TextBox styleName="{style.input}" ui:field="edt_MATKHAU"/>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.panel}">
+				<g:VerticalPanel styleName="{style.panel_button}" horizontalAlignment="ALIGN_CENTER">
+					<g:Button ui:field="btn_huy" width="100PX" text="HUỶ" />
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.panel_button}" horizontalAlignment="ALIGN_CENTER">
+					<g:Button width="100PX" text="XÁC NHẬN" ui:field="btn_xacnhan"/>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

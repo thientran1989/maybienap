@@ -1,0 +1,29 @@
+.panel_input {
+	width: 700px;
+	padding: 6px;
+	vertical-align: middle;
+	border: 1px;
+}
+
+.label {
+	width: 200px;
+	font-size: large;
+}
+
+.input {
+	width: 500px;
+	padding: 5px 4px;
+	border: 1px solid #ccc;
+	border-top: 1px solid #999;
+	font-size: large;
+	font-family: Arial Unicode MS, Arial, sans-serif;
+}
+
+.button {
+	width: 200px;
+	font-size: large;
+}
+.gwt_PopupPanel {
+    border: none !important;
+    background: none !important;
+ }

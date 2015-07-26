@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+	.box {
+		padding: 6px;
+	}
+	
+	.label {
+		width: 700px;
+		font-size: large;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.box}">
+				<g:TextBox ui:field="edt_timkiem" width="200px" />
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.box}">
+				<g:Button width="100px" text="Tìm Kiếm" ui:field="btn_timkiem" />
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.box}">
+				<g:Button width="100px" text="Cấu hình in" ui:field="btn_CONFIG"  />
+			</g:HorizontalPanel>
+		</g:HorizontalPanel>
+		<g:VerticalPanel width="100%" styleName="{style.box}"
+			height="200px">
+			<p1:CellTable ui:field="cell_bienban" width="100%" />
+		</g:VerticalPanel>
+		<g:HorizontalPanel>
+			<g:VerticalPanel styleName="{style.box}">
+				<g:Label text="New Label" styleName="{style.label}"
+					ui:field="tv_bb_chitiet" />
+			</g:VerticalPanel>
+			<g:HorizontalPanel>
+				<g:VerticalPanel styleName="{style.box}">
+					<g:Button text="IN QUYẾT ĐỊNH" ui:field="btn_in" />
+
+				</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.box}">
+					<g:Button text="HUỶ QUYẾT ĐỊNH" ui:field="btn_HUY"/>
+
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:HorizontalPanel>
+		<g:VerticalPanel width="100%" height="200px">
+			<p1:CellTable ui:field="cell_chitiet" width="100%" />
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

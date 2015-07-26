@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+	.panel {
+		padding: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		DANH SÁCH NHÂN VIÊN
+		<g:HorizontalPanel >
+			<g:VerticalPanel styleName="{style.panel}">
+				<g:Button width="200px" text="Tạo người dùng" ui:field="btn_themuser"/>
+			</g:VerticalPanel>
+			<g:VerticalPanel styleName="{style.panel}">
+				<g:Button width="100px" text="Làm mới" ui:field="btn_lammoi"/>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+		<g:VerticalPanel width="100%">
+			<p1:CellTable ui:field="cell_NHANVIEN" width="100%"/>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

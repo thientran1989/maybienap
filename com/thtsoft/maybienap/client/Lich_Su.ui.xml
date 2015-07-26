@@ -1,0 +1,97 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	
+	.panel {
+		padding: 10px;
+	}
+		.pane {
+		text-align: center;
+	}
+	.box{
+	padding: 6px;
+
+	}
+	.button {
+		background-color: #eeeeee;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),
+			color-stop(100%, #cccccc));
+		background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+		background-image: linear-gradient(top, #eeeeee, #cccccc);
+		border: 1px solid #ccc;
+		border-bottom: 1px solid #bbb;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		color: #333;
+		font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+			Geneva, Verdana, sans-serif;
+		line-height: 1;
+		padding: 0px 0;
+		text-align: center;
+		text-shadow: 0 1px 0 #eee;
+		width: 120px;
+	}
+	
+	.button:hover {
+		background-color: #dddddd;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd),
+			color-stop(100%, #bbbbbb));
+		background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+		background-image: linear-gradient(top, #dddddd, #bbbbbb);
+		border: 1px solid #bbb;
+		border-bottom: 1px solid #999;
+		cursor: pointer;
+		text-shadow: 0 1px 0 #ddd;
+	}
+	
+	.button:active {
+		border: 1px solid #aaa;
+		border-bottom: 1px solid #888;
+		-webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+		-moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+		box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div align="right">
+			<g:HorizontalPanel>
+				<g:VerticalPanel styleName="{style.panel}">
+					<g:Button text="In thông tin" ui:field="button" />
+				</g:VerticalPanel>
+				<g:VerticalPanel  
+	styleName="{style.box}">
+					<g:SimplePanel styleName="{style.button}" width="150px" ui:field="pane_trolai" >
+							<g:HTMLPanel>
+								<table align="center">
+									<tr>
+										<td>
+											<g:Image styleName="{style.pane}" url="back.png"></g:Image>
+										</td>
+										<td>
+											<g:Label text="Trở lại">Image buttom</g:Label>
+										</td>
+									</tr>
+								</table>
+							</g:HTMLPanel>
+						</g:SimplePanel>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</div>
+
+		<g:Label text="New Label" ui:field="tv_somay" />
+		<p1:CellTable ui:field="cell_lichsu" width="100%" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+		width: 100px;
+	}
+	.panel{
+		padding: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		CẤU HÌNH CHO QUYẾT ĐỊNH LUÂN CHUYỂN MÁY BIẾN ÁP
+		<g:VerticalPanel width="100%">
+			<g:VerticalPanel width="100%">
+				<g:Label text="Căn cứ 1"/>
+				<g:TextArea width="100%" ui:field="edt_CANCU1"/>
+			</g:VerticalPanel>
+			<g:VerticalPanel width="100%">
+				<g:Label text="Căn cứ 2"/>
+				<g:TextArea width="100%" ui:field="edt_CANCU2"/>
+			</g:VerticalPanel>
+			<g:VerticalPanel width="100%">
+				<g:Label text="Điều 3 :"/>
+				<g:TextArea width="100%" ui:field="edt_DIEU3"/>
+			</g:VerticalPanel>
+			<g:VerticalPanel width="100%">
+				<g:Label text="Điều 4 :"/>
+				<g:TextArea width="100%" ui:field="edt_DIEU4"/>
+			</g:VerticalPanel>
+			<g:HorizontalPanel width="100%">
+				<g:VerticalPanel width="100%" styleName="{style.panel}">
+					<g:TextBox ui:field="edt_luuten"/>
+				</g:VerticalPanel>
+				<g:VerticalPanel width="100%">
+					<g:VerticalPanel  styleName="{style.panel}">
+						<g:TextArea ui:field="edt_chucvu_2"/>
+					</g:VerticalPanel>
+					<g:VerticalPanel  styleName="{style.panel}">
+						<g:TextBox ui:field="edt_ten_2"/>
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:HorizontalPanel width="100%">
+			<g:VerticalPanel width="100%" horizontalAlignment="ALIGN_CENTER">
+				<g:Button text="HUỶ" ui:field="btn_HUY" width="100px"/>
+			</g:VerticalPanel>
+			<g:VerticalPanel width="100%" horizontalAlignment="ALIGN_CENTER">
+				<g:Button ui:field="btn_XACNHAN" text="XÁC NHẬN" width="100px"/>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
