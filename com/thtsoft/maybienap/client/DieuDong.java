@@ -305,7 +305,7 @@ public class DieuDong extends Composite {
 //					mLS.setTram(oQD_tam.getTram());
 //					object.setLoai_dieudong(Utils.DD_CAP);
 //				}
-
+				if(object.getDa_tra()==Utils.DA_TRA){
 				if (LOAI == LOAI_DIEU) {
 					if (can_add(object, list_LS_dieuve)) {
 						object.setLoai_history(Utils.LS_LUANCHUYEN_BINHTHUONG);
@@ -316,6 +316,7 @@ public class DieuDong extends Composite {
 						object.setMadv_to(oQD_tam.getMadv_to());
 						object.setTram("");
 						object.setQD_so(oQD_tam.getQD_so());
+						object.setDa_tra(Utils.CHUA_TRA);
 						list_LS_tam.add(object);
 						list_LS_dieuve.add(0, object);
 						set_data_list_lichsu(LOAI, cell_LichSu, list_LS_dieuve);
@@ -331,6 +332,7 @@ public class DieuDong extends Composite {
 						object.setMadv_from(oQD_tam.getMadv_to());
 						object.setMadv_to(oQD_tam.getMadv_from());
 						object.setQD_so(oQD_tam.getQD_so());
+						object.setDa_tra(Utils.DA_TRA);
 						list_LS_tam.add(object);
 						list_LS_capcho.add(0, object);
 						set_data_list_lichsu(LOAI, cell_lichsu_cap,
@@ -338,6 +340,9 @@ public class DieuDong extends Composite {
 					} else {
 						SC.say(object.getSo_may() + " đã được chọn !");
 					}
+				}
+				}else{
+					SC.say(object.getSo_may() + " thực tế chưa trả trong Quyết định "+object.getQD_so()+" nên không thể điều động, Vui lòng xác nhận đã trả máy !");
 				}
 			}
 		});

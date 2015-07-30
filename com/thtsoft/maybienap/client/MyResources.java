@@ -10,6 +10,6 @@ public interface MyResources  extends ClientBundle {
     @Source("css/login_style.css")
     MyStyle_login mystyle();
     
-    @Source("css/loading.gif")
+    @Source("css/loading_cat.gif")
     ImageResource getPreloader();
 }

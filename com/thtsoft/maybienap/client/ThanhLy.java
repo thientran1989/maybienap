@@ -147,12 +147,14 @@ public class ThanhLy extends Composite {
 		btn_thanhly.setFieldUpdater(new FieldUpdater<Obj_LichSu, String>() {
 			public void update(int index, final Obj_LichSu object, String value) {
 				if(can_add(object,list_thanhly)){
+					if(object.getDa_tra()==Utils.DA_TRA){
 					if (object.getTinhtrang_sudung().equals(Utils.TT_CHOTHANHLY)) {
 						object.setQD_so(oQD_tam.getQD_so());
 						object.setTinhtrang_sudung(Utils.TT_DATHANHLY);
 						object.setLoai_dieudong(Utils.LS_THANHLY);
 						object.setMadv_from(mLocal_user.getMa_donvi());
 						object.setMadv_to(mLocal_user.getMa_donvi());
+						object.setDa_tra(Utils.DA_TRA);
 						list_thanhly.add(object);
 						set_list_thanhly(list_thanhly);
 					} else {
@@ -161,7 +163,9 @@ public class ThanhLy extends Composite {
 				}else{
 					SC.say("Đã được chọn !");
 				}
-				
+				}else{
+					SC.say(object.getSo_may() + " thực tế chưa trả trong Quyết định "+object.getQD_so()+" nên không thể điều động, Vui lòng xác nhận đã trả máy !");
+				}
 			}
 		});
 		cell_timkiem.setColumnWidth(btn_thanhly, 20, Unit.PCT);

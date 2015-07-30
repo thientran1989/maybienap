@@ -5,9 +5,24 @@
 	.important {
 		font-weight: bold;
 	}
+	.panel_large_title {
+		background: #009688;
+		padding: 10px;
+		vertical-align: middle;
+	}
+	
+	.large_title {
+		font-size: larger;
+		color: #FFFFFF;
+		font-weight: bolder;
+	}
 	</ui:style>
 	<g:HTMLPanel>
 		<g:MenuBar ui:field="menu_bar"/>
+		<g:VerticalPanel width="100%" horizontalAlignment="ALIGN_CENTER"
+					styleName="{style.panel_large_title}">
+					<g:Label styleName="{style.large_title}" ui:field="tv_TITLE" />
+				</g:VerticalPanel>
 		<g:VerticalPanel width="100%" ui:field="ver_main"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 

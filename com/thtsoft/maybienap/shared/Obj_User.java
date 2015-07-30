@@ -97,6 +97,22 @@ public class Obj_User implements Serializable{
 		}
 		return ten;
 	}
+	public int get_donvi_pos(List<Obj_donvi> list){
+		int pos = -1;
+		try {
+			if(list!=null){
+				for (int i=0;i<list.size();i++) {
+					if (list.get(i).getMa_donvi().equals(getMa_donvi())){
+						pos = i;
+						break;
+					}
+				}
+			}
+		} catch (Exception e) {
+			
+		}
+		return pos;
+	}
 	
 	public static final String TAG_table_user="MBA_USER";
 	

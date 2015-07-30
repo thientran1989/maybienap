@@ -103,7 +103,7 @@
 	}
 	</ui:style>
 	<g:HTMLPanel>
-		<g:VerticalPanel ui:field="ver3" styleName="{style.paneL_border}" width="100%">
+		<g:VerticalPanel width="100%" ui:field="ver3" styleName="{style.paneL_border}">
 			<g:HorizontalPanel styleName="{style.panel_padding_small}" verticalAlignment="ALIGN_MIDDLE">
 				<g:HorizontalPanel styleName="{style.panel_padding_small}">
 					<g:Label text="Đơn vị" styleName="{style.label}" />
@@ -111,18 +111,11 @@
 				<g:HorizontalPanel styleName="{style.panel_padding_small}">
 					<g:ListBox styleName="{style.combo}" ui:field="cbx_donvi" />
 				</g:HorizontalPanel>
-				<g:HorizontalPanel styleName="{style.panel_padding_small}">
-					<g:Label text="Tình trạng" styleName="{style.label_medium}" />
-				</g:HorizontalPanel>
-				<g:HorizontalPanel styleName="{style.panel_padding_small}">
-					<g:ListBox styleName="{style.combo}" ui:field="cbx_tinhtrang" />
-				</g:HorizontalPanel>
 				<g:VerticalPanel styleName="{style.panel_padding_small}">
 					<g:Button text="Tìm Kiếm" ui:field="btn_timkiem" width="100px"/>
 				</g:VerticalPanel>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
-				<g:VerticalPanel  styleName="{style.box}">
+			<g:VerticalPanel  styleName="{style.box}">
 				<g:SimplePanel ui:field="pane_inds" styleName="{style.button}" width="150px">
 							<g:HTMLPanel ui:field="html_adduser">
 								<table align="center">
@@ -138,13 +131,9 @@
 							</g:HTMLPanel>
 						</g:SimplePanel>
 			</g:VerticalPanel>
-				<g:VerticalPanel  styleName="{style.box}" width="500px">
-					<g:Label ui:field="tv_SOLUONG"  styleName="{style.label_verylong}"/>
-				
-			</g:VerticalPanel>
-			</g:HorizontalPanel>
 			<g:VerticalPanel width="100%" styleName="{style.panel_padding_small}">
 				<p1:CellTable ui:field="cell_MBA" width="100%"/>
+				
 			</g:VerticalPanel>
 		</g:VerticalPanel>
 	</g:HTMLPanel>

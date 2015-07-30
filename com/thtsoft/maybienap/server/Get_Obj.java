@@ -96,8 +96,9 @@ public class Get_Obj {
 			mHTR.setQD_so(rs.getString(Obj_LichSu.TAG_QD_so+""));
 			mHTR.setMadv_from(rs.getString(Obj_LichSu.TAG_madv_from+""));
 			mHTR.setMadv_to(rs.getString(Obj_LichSu.TAG_madv_to+""));
-			mHTR.setLoai_history(rs.getString(Obj_LichSu.TAG_loai_history+""));
-			mHTR.setTinhtrang_sudung(rs.getString(Obj_LichSu.TAG_tinhtrang_sudung+""));
+			mHTR.setLoai_history(rs.getString(Obj_LichSu.TAG_loai_history));
+			mHTR.setTinhtrang_sudung(rs.getString(Obj_LichSu.TAG_tinhtrang_sudung));
+			mHTR.setDa_tra(rs.getInt(Obj_LichSu.TAG_da_tra));
 			String bb_tnghiem=rs.getString(Obj_LichSu.TAG_bb_tnghiem);
 			if(bb_tnghiem==null || bb_tnghiem.equals("null")){
 				mHTR.setBb_tnghiem("");
@@ -105,9 +106,9 @@ public class Get_Obj {
 				mHTR.setBb_tnghiem(bb_tnghiem);
 			}
 			
-			mHTR.setTen_tscd(rs.getString(Obj_LichSu.TAG_ten_tscd+""));
-			mHTR.setID(rs.getInt(Obj_LichSu.TAG_ID+""));
-			mHTR.setLoai_dieudong(rs.getString(Obj_LichSu.TAG_loai_dieudong+""));
+			mHTR.setTen_tscd(rs.getString(Obj_LichSu.TAG_ten_tscd));
+			mHTR.setID(rs.getInt(Obj_LichSu.TAG_ID));
+			mHTR.setLoai_dieudong(rs.getString(Obj_LichSu.TAG_loai_dieudong));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

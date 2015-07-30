@@ -68,4 +68,7 @@ public interface IOData2ServerAsync {
 	void xoa_user(Obj_User mUS, AsyncCallback<CallbackResult> callback);
 	void check_tontai_LS_OF_USER(Obj_User oUSER,
 			AsyncCallback<CallbackResult> callback);
+	void get_DSMBA_CHUATRA(String donvi, AsyncCallback<CallbackResult> callback);
+	
+	void getLAST_BB(int iSL,AsyncCallback<CallbackResult> callback);
 }

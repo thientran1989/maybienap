@@ -198,15 +198,20 @@ public class DieuDong_SuaChua extends Composite {
 		editSLBtn.setFieldUpdater(new FieldUpdater<Obj_LichSu, String>() {
 			public void update(int index, final Obj_LichSu object,
 					String value) {
+				if(object.getDa_tra()==Utils.DA_TRA){
 				if (can_add(object, list_dieuve)) {
 					object.setKho(oQD_tam.getMadv_to());
 					object.setTinhtrang_sudung(oQD_tam.getTinhtrang_dieuve());
+					object.setDa_tra(Utils.DA_TRA);
 					final Obj_LichSu mLS = get_lichSu(object, get_quyetdinh());
 					mLS.setLoai_dieudong(Utils.LS_LUANCHUYEN_SUACHUA);
 					list_dieuve.add(0, mLS);
 					set_data_list_lichsu(cell_LichSu, list_dieuve);
 				} else {
 					SC.say(object.getSo_may() + " đã được chọn !");
+				}
+				}else{
+					SC.say(object.getSo_may() + " thực tế chưa trả trong Quyết định "+object.getQD_so()+" nên không thể điều động, Vui lòng xác nhận đã trả máy !");
 				}
 
 			}

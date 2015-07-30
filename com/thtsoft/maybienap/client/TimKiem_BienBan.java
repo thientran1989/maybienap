@@ -80,6 +80,28 @@ public class TimKiem_BienBan extends Composite {
 		MyResources.INSTANCE.mystyle().ensureInjected();
 		initWidget(uiBinder.createAndBindUi(this));
 		tv_bb_chitiet.setText("Chưa có chi tiết biên bản");
+		
+		show_loading();
+		mIodata.getLAST_BB(5,
+				new AsyncCallback<CallbackResult>() {
+
+					public void onFailure(Throwable caught) {
+						popup.hide();
+						Window.alert("loi " + caught.toString());
+
+					}
+					@SuppressWarnings("unchecked")
+					public void onSuccess(CallbackResult result) {
+						list_BB = (List<Obj_QuyetDinh>) result
+								.getResultObj();
+						if(list_BB.size()>0){
+							set_list();
+						}
+						
+						popup.hide();
+
+					}
+				});
 	}
 
 	public void set_list() {

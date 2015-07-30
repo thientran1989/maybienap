@@ -148,13 +148,13 @@
 			</g:HorizontalPanel>
 			<g:HorizontalPanel styleName="{style.panel_padding_small}">
 				<g:HorizontalPanel styleName="{style.panel_padding_small}">
-					<g:Label text="Nguồn gốc tài sản " styleName="{style.label_long}"/>
+					<g:Label text="4. Nguồn gốc tài sản cấp" styleName="{style.label_long}"/>
 				</g:HorizontalPanel>
 				<g:HorizontalPanel>
 					<g:TextBox width="300px" ui:field="edt_nguongocts" />
 				</g:HorizontalPanel>
 				<g:HorizontalPanel styleName="{style.panel_padding_small}">
-					<g:Label text="Gắn tại trạm" styleName="{style.label_long}"/>
+					<g:Label text="Sẽ gắn tại trạm" styleName="{style.label_long}"/>
 				</g:HorizontalPanel>
 				<g:HorizontalPanel>
 					<g:TextBox ui:field="edt_tram" width="300px" />

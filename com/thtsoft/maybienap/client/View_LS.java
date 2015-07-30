@@ -33,8 +33,10 @@ public class View_LS extends PopupPanel {
 	SimplePager pager;
 	@UiField
 	Button btn_close;
-	@UiField Label tv_somay;
-	@UiField Label tv_msts;
+	@UiField
+	Label tv_somay;
+	@UiField
+	Label tv_msts;
 	boolean load_chitiet = false;
 
 	interface View_LSUiBinder extends UiBinder<Widget, View_LS> {
@@ -108,20 +110,27 @@ public class View_LS extends PopupPanel {
 			}
 		};
 
-		// dieu hay cap
+		// THAO TÁC
 		TextColumn<Obj_LichSu> lOAI_LC_Column = new TextColumn<Obj_LichSu>() {
 			@Override
 			public String getValue(Obj_LichSu object) {
-				return 
-				Obj_LichSu.get_loailichsu_show(object.loai_history);
+				return Obj_LichSu.get_loailichsu_show(object.loai_history);
+			}
+		};
+		// QUYET DINH
+		TextColumn<Obj_LichSu> soQD_Column = new TextColumn<Obj_LichSu>() {
+			@Override
+			public String getValue(Obj_LichSu object) {
+				return object.getQD_so();
 			}
 		};
 		if (load_chitiet == false) {
-			cell_lichsu.addColumn(tinhtrangColumn, "Tình trạng");
-			cell_lichsu.addColumn(fromColumn, "từ");
-			cell_lichsu.addColumn(toColumn, "Đến");
-			cell_lichsu.addColumn(thoi_gian, "thời gian");
-			cell_lichsu.addColumn(lOAI_LC_Column, "Thao tác");
+			cell_lichsu.addColumn(tinhtrangColumn, "TÌNH TRẠNG");
+			cell_lichsu.addColumn(fromColumn, "TỪ");
+			cell_lichsu.addColumn(toColumn, "ĐẾN");
+			cell_lichsu.addColumn(thoi_gian, "THỜI GIAN");
+			cell_lichsu.addColumn(lOAI_LC_Column, "THAO TÁC");
+			cell_lichsu.addColumn(soQD_Column, "SỐ QĐ");
 		}
 
 		AsyncDataProvider<Obj_LichSu> provider = new AsyncDataProvider<Obj_LichSu>() {

@@ -195,7 +195,7 @@ public class DB_SQL {
 			preparedStatement.setString(39, mLS.getMadv_from() + "");
 			preparedStatement.setString(40, mLS.getMadv_to() + "");
 			preparedStatement.setString(41, mLS.getLoai_history() + "");
-			preparedStatement.setString(42, mLS.getDa_tra() + "");
+			preparedStatement.setInt(42, mLS.getDa_tra());
 			preparedStatement.setString(43, mLS.getTen_tscd() + "");
 			preparedStatement.setString(44, mLS.getBb_tnghiem() + "");
 			preparedStatement.setInt(45, mLS.getID());
@@ -291,7 +291,7 @@ public class DB_SQL {
 			preparedStatement.setString(32, mLS.getY_chuan() + "");
 			preparedStatement.setString(33, mLS.getX_tam() + "");
 			preparedStatement.setString(34, mLS.getY_tam() + "");
-			preparedStatement.setInt(35, mLS.getDa_tra());
+			preparedStatement.setInt(35,mLS.getDa_tra());
 			preparedStatement.setString(36, mLS.getTen_tscd() + "");
 			preparedStatement.setString(37, mLS.getBb_tnghiem() + "");
 		} catch (SQLException e) {
@@ -436,6 +436,27 @@ public class DB_SQL {
 				+ mUS.getUsername_mba()+"'";
 		return SQL;
 	}
+	public static String get_SQL_DS_MBA_CHUATRA(String DVI){
+		String SQL ="";
+		String SQL_SELECT="select * from "+DB_CONFIG.DATA_NAME+"."+Obj_LichSu.TAG_table_lichsu+" MBA ";
+		String SQL_MAXID ="ID = (select max(ID) from "+Obj_LichSu.TAG_table_lichsu+" where SO_MAY =MBA.SO_MAY)";
+		String SQL_OF_DONVI =Obj_LichSu.TAG_madv_from+" ='"+DVI+"'";
+		String SQL_CHUATRA =Obj_LichSu.TAG_da_tra+" ="+Utils.CHUA_TRA+" and "+Obj_LichSu.TAG_loai_dieudong+"='DD_VE'";
+		String SQL_ORDER_ID =" order by ID desc";
+		// lay het don vi
+		if(DVI.equals("ALL")){
+			SQL=SQL_SELECT+"where "+
+					SQL_MAXID+" and "+SQL_CHUATRA+SQL_ORDER_ID;
+		}else{
+			SQL=SQL_SELECT+"where "+
+					SQL_MAXID+" and "+SQL_CHUATRA+" and "+SQL_OF_DONVI+SQL_ORDER_ID;
+		}	
+		return SQL;
+	}
 	
+	public static String get_5_LAST_QD(int iSL){
+		String SQL ="SELECT * FROM "+Obj_QuyetDinh.TAG_table_QuyetDinh+" WHERE ROWNUM <= "+iSL+" order by "+Obj_QuyetDinh.TAG_thoi_gian_tao+" desc";
+		return SQL;
+	}
 	
 }

@@ -236,6 +236,7 @@ public class Tao_MBA extends PopupPanel {
 						.getMa_donvi());
 				mMBA.setLoai_dieudong(Utils.LS_TAO);
 				mMBA.setQD_so("");
+				mMBA.setDa_tra(Utils.DA_TRA);
 			} else {
 				mMBA.setLoai_dieudong(Utils.LS_SUA);
 			}
@@ -286,6 +287,7 @@ public class Tao_MBA extends PopupPanel {
 					.getSelectedIndex()).KEY);
 			mMBA.setTen_tscd(edt_ten_tscd.getText().toString());
 			mMBA.setBb_tnghiem(edt_bb_tnghiem.getText().toString());
+			
 			for (Obj_donvi obj_donvi : mL_DVI) {
 				if (obj_donvi.getMa_donvi().equals(mLocal_user.getMa_donvi())) {
 					mMBA.setX_chuan(obj_donvi.getX_chuan());

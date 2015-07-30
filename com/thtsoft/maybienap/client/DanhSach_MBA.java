@@ -6,7 +6,6 @@ import java.util.List;
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -138,6 +137,34 @@ public class DanhSach_MBA extends Composite {
 						.getTinhtrang_sudung());
 			}
 		};
+		// nha san xuat
+	    TextColumn<Obj_LichSu> nhasxColumn = new TextColumn<Obj_LichSu>() {
+	      @Override
+	      public String getValue(Obj_LichSu object) {
+	        return object.getNha_sanxuat();
+	      }
+	    };
+	 // cong suat
+	    TextColumn<Obj_LichSu> congsuatColumn = new TextColumn<Obj_LichSu>() {
+	      @Override
+	      public String getValue(Obj_LichSu object) {
+	        return object.getCong_suat();
+	      }
+	    };
+	    // tram
+	    TextColumn<Obj_LichSu> tramColumn = new TextColumn<Obj_LichSu>() {
+	      @Override
+	      public String getValue(Obj_LichSu object) {
+	        return object.getTram();
+	      }
+	    };
+	    // bien ban thi nghiem
+	    TextColumn<Obj_LichSu> bbtnColumn = new TextColumn<Obj_LichSu>() {
+	      @Override
+	      public String getValue(Obj_LichSu object) {
+	        return object.getBb_tnghiem();
+	      }
+	    };
 		// Add a ButtonCell sua
 		Column<Obj_LichSu, String> editSLBtn = new Column<Obj_LichSu, String>(
 				new ButtonCell()) {
@@ -177,7 +204,7 @@ public class DanhSach_MBA extends Composite {
 				}
 			}
 		});
-		cell_MBA.setColumnWidth(editSLBtn, 20, Unit.PCT);
+		
 		// Add a ButtonCell lich su
 		Column<Obj_LichSu, String> LICHSU_btn = new Column<Obj_LichSu, String>(
 				new ButtonCell()) {
@@ -200,7 +227,6 @@ public class DanhSach_MBA extends Composite {
 				});
 			}
 		});
-		cell_MBA.setColumnWidth(LICHSU_btn, 20, Unit.PCT);
 
 		// Add a ButtonCell xoa
 		Column<Obj_LichSu, String> btn_XOA = new Column<Obj_LichSu, String>(
@@ -238,12 +264,15 @@ public class DanhSach_MBA extends Composite {
 				}
 			}
 		});
-		cell_MBA.setColumnWidth(btn_XOA, 20, Unit.PCT);
 
 		if (load == false) {
-			cell_MBA.addColumn(nameColumn, "Số máy BA");
-			cell_MBA.addColumn(mstsColumn, "Mã số TS");
-			cell_MBA.addColumn(donviColumn, "Đơn vị QL");
+			cell_MBA.addColumn(nameColumn, "SỐ MÁY");
+	    	cell_MBA.addColumn(mstsColumn, "MÃ SỐ TS");
+	    	cell_MBA.addColumn(donviColumn, "ĐƠN VỊ QL");
+	    	cell_MBA.addColumn(nhasxColumn, "NHÀ SX");
+	    	cell_MBA.addColumn(congsuatColumn, "CÔNG SUẤT");
+	    	cell_MBA.addColumn(tramColumn, "TRẠM");
+	    	cell_MBA.addColumn(bbtnColumn, "BB THÍ NGHIỆM");
 			cell_MBA.addColumn(tinhtrangColumn, "Tình trạng");
 			cell_MBA.addColumn(editSLBtn, "");
 			cell_MBA.addColumn(LICHSU_btn, "");

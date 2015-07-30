@@ -35,6 +35,11 @@
 		width: 150px;
 		font-size: medium;
 	}
+	.label_verylong {
+		font-weight: bold;
+		font-size: medium;
+		width: 400px;
+	}
 	</ui:style>
 	<g:HTMLPanel>
 		<div align="center">
@@ -49,10 +54,10 @@
 				</g:VerticalPanel>
 				<g:HorizontalPanel>
 					<g:HorizontalPanel styleName="{style.panel_input}">
-						<g:Label styleName="{style.label}" text="Tên TSCĐ" ui:field="tv_somay" />
+						<g:Label   styleName="{style.label_verylong}" text="Tên TSCĐ" ui:field="tv_somay" />
 					</g:HorizontalPanel>
 					<g:HorizontalPanel styleName="{style.panel_input}">
-						<g:Label styleName="{style.label}" text="Tên TSCĐ" ui:field="tv_msts" />
+						<g:Label styleName="{style.label_verylong}" text="Tên TSCĐ" ui:field="tv_msts" />
 					</g:HorizontalPanel>
 				</g:HorizontalPanel>
 				<g:VerticalPanel width="100%" horizontalAlignment="ALIGN_CENTER">

@@ -55,6 +55,7 @@ public class Obj_LichSu implements Serializable {
 	public String ten_tscd ="";
 	public String bb_tnghiem ="";
 	public String loai_dieudong ="";
+//	public int namhinhthanhts;
 	public int ID =0;
 	
 	public int getID() {

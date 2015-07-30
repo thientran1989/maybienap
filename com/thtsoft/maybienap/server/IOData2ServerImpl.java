@@ -872,7 +872,7 @@ public class IOData2ServerImpl extends RemoteServiceServlet implements
 							String delete_LS_SQL = "delete from CSKH."
 									+ Obj_LichSu.TAG_table_lichsu;
 							delete_LS_SQL = delete_LS_SQL + " where "
-									+ Obj_LichSu.TAG_ID + "=" + mLS.getID();
+									+ Obj_LichSu.TAG_QD_so + "=" + mLS.getQD_so();
 							preparedStatement_LS = dbConnection
 									.prepareStatement(delete_LS_SQL);
 							preparedStatement_LS.addBatch();
@@ -1198,6 +1198,63 @@ public class IOData2ServerImpl extends RemoteServiceServlet implements
 			mCB.setResultString(Utils.CB_TONTAI);
 		}
 		return mCB;
+	}
+
+	public CallbackResult get_DSMBA_CHUATRA(String donvi)
+			throws IllegalArgumentException {
+		Connection con;
+		ResultSet rs = null;
+		Statement st;
+		List<Obj_LichSu> list_MBA = null;
+		CallbackResult oCB = null;
+		oCB = new CallbackResult();
+		try {
+			con = getDBConnection();
+			st = con.createStatement();
+			rs = st.executeQuery(DB_SQL.get_SQL_DS_MBA_CHUATRA(donvi));
+			if (rs != null) {
+				list_MBA = new ArrayList<Obj_LichSu>();
+				while (rs.next()) {
+					Obj_LichSu mBA = Get_Obj.set_result_HTR(rs);
+					list_MBA.add(mBA);
+				}
+				oCB.setResultObj(list_MBA);
+			}
+			st.close();
+			rs.close();
+			con.close();
+		} catch (Exception e) {
+
+		}
+		return oCB;
+	}
+
+	public CallbackResult getLAST_BB(int iSL) throws IllegalArgumentException {
+		Connection con;
+		ResultSet rs = null;
+		Statement st;
+		List<Obj_QuyetDinh> list_QD = null;
+		CallbackResult oCB = null;
+		oCB = new CallbackResult();
+		try {
+			con = getDBConnection();
+			st = con.createStatement();
+			rs = st.executeQuery(DB_SQL.get_5_LAST_QD(5));
+			if (rs != null) {
+				list_QD = new ArrayList<Obj_QuyetDinh>();
+				while (rs.next()) {
+					Obj_QuyetDinh mQD = Get_Obj.set_result_QD(rs);
+					list_QD.add(mQD);
+				}
+				oCB.setResultObj(list_QD);
+			}
+			st.close();
+			rs.close();
+			con.close();
+		} catch (Exception e) {
+
+		}
+		return oCB;
 	}
 
 }

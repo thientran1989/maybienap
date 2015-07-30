@@ -48,4 +48,7 @@ public interface IOData2Server extends RemoteService {
 	CallbackResult check_tontai_USER(Obj_User oUSER) throws IllegalArgumentException;
 	CallbackResult xoa_user(Obj_User mUS) throws IllegalArgumentException;
 	CallbackResult check_tontai_LS_OF_USER(Obj_User oUSER) throws IllegalArgumentException;
+	CallbackResult get_DSMBA_CHUATRA(String donvi) throws IllegalArgumentException;
+	
+	CallbackResult getLAST_BB(int iSL) throws IllegalArgumentException;
 }
